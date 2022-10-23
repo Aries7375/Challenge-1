@@ -1,0 +1,111 @@
+:root {
+  --first: hsl(31, 77%, 52%);
+  --second: hsl(184, 100%, 22%);
+  --third: hsl(179, 100%, 13%);
+  --font: hsla(0, 0%, 100%, 0.75);
+  --buton: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+}
+.principal-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  align-items: center;
+}
+.son {
+  height: 443px;
+  width: 327px;
+  padding: 50px;
+}
+.son1 {
+  background: var(--first);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.son2 {
+  background: var(--second);
+}
+.son3 {
+  background: var(--third);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+h2 {
+  color: var(--buton);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 34px;
+  margin: 40px 0 40px 0;
+}
+p {
+  font-size: 15px;
+  color: var(--font);
+}
+body {
+  background: var(--buton);
+}
+button {
+  background: var(--buton);
+  border-radius: 2rem;
+  margin-top: 30px;
+  width: 145px;
+  height: 50px;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  background: inherit;
+  border: 2px solid var(--buton);
+  color: var(--font) !important;
+}
+.son1 button {
+  color: var(--first);
+}
+.son2 button {
+  color: var(--second);
+}
+.son3 button {
+  color: var(--third);
+}
+
+@media (min-width: 1000px) {
+  body {
+    background: #e91e63;
+  }
+  .principal-cont {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .son {
+    min-height: 450px;
+    max-width: 280px;
+  }
+  .son1 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+  .son3 {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .father {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
